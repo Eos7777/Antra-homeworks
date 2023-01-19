@@ -1,0 +1,148 @@
+:root {
+  --title: #333;
+  --white: #fff;
+  --black: black;
+  --grey: #eeeeee;
+  --dark-grey: #858585;
+  --blue-color: #2196f3;
+}
+* {
+  font-family: 'Crimson Text', serif;
+}
+
+.signup-form {
+  display: flex;
+  max-width: 30rem;
+  padding: 1% 1% 1% 1%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+  margin: 10% auto 0 auto;
+}
+
+.signup-form .title {
+  font-weight: 400;
+  font-size: 180%;
+  height: 15px;
+}
+
+.signup-form .name-wrapper {
+  max-width: 30rem;
+  width: 80%;
+}
+
+.signup-form .mobile-email-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+  width: 80%;
+}
+
+.signup-form .password-wrapper {
+  max-width: 30rem;
+  width: 80%;
+}
+
+input {
+  outline: none;
+  margin: 6px;
+  font-weight: 300;
+  border-radius: 6px;
+  color: var(--black);
+  background: var(--white);
+  padding: 6px 8px 6px 8px;
+  border: var(--grey) 2px solid;
+  font-size: calc(16 / 16 * 1rem);
+  width: 41%;
+}
+
+input[type='email'],
+input[type='Mobile-no'] {
+  width: 92%;
+  font-size: calc(16 / 16 * 1rem);
+}
+input:focus {
+  background-color: white;
+  outline: gray;
+  border: rgb(133, 189, 235);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 0 3px rgb(133, 189, 235);
+}
+
+input[id='iagree'] {
+  width: 6px;
+}
+label[for='iagree'] {
+  font-size: 60%;
+}
+label[for='words'] {
+  font-size: 60%;
+}
+
+.check-box {
+  float: left;
+}
+
+.words {
+  float: right;
+}
+
+.signup-form .agreement {
+  width: 80%;
+}
+.signup-form .agreement .check-box {
+  max-width: 30rem;
+  width: 20%;
+}
+.signup-form .agreement .words {
+  max-width: 30rem;
+  width: 80%;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.button {
+  width: 82%;
+}
+
+button {
+  background-color: var(--blue-color);
+  color: white;
+  width: 44%;
+  border-radius: 6px;
+  opacity: 0.9;
+  margin: 8px;
+  font-weight: 300;
+  padding: 6px 8px 6px 8px;
+  font-size: 1rem;
+}
+
+.button .registerbtn {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+  border-style: solid;
+}
+
+.button .signinbtn {
+  background-color: green;
+  border-color: green;
+  border-style: solid;
+}
+
+label[type='inline-register'] {
+  background-color: var(--blue-color);
+  border-radius: 6px;
+  padding: 2px 8px 3px 8px;
+  color: var(--white);
+  font-size: 100%;
+}
+
+button:hover {
+  opacity: 1;
+}
