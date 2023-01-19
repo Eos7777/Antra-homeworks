@@ -12,7 +12,6 @@
 
 .signup-form {
   display: flex;
-  max-width: 30rem;
   padding: 1% 1% 1% 1%;
   align-items: center;
   flex-direction: column;
@@ -28,7 +27,6 @@
 }
 
 .signup-form .name-wrapper {
-  max-width: 30rem;
   width: 80%;
 }
 
@@ -37,12 +35,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  max-width: 30rem;
+  /* max-width: 30rem; */
   width: 80%;
 }
 
 .signup-form .password-wrapper {
-  max-width: 30rem;
+  /* max-width: 30rem; */
   width: 80%;
 }
 
@@ -95,11 +93,11 @@ label[for='words'] {
   width: 80%;
 }
 .signup-form .agreement .check-box {
-  max-width: 30rem;
+  /* max-width: 30rem; */
   width: 20%;
 }
 .signup-form .agreement .words {
-  max-width: 30rem;
+  /* max-width: 30rem; */
   width: 80%;
 }
 
