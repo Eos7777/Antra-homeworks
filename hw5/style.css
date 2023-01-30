@@ -1,0 +1,63 @@
+/* create a standard style for html elements */
+html {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        color: #000;
+        background-color: #ffffff;
+      }
+      
+      p {
+        margin: 0;
+        white-space: nowrap;
+      }
+      
+      /* create a standard style for a div with grid layout */
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0%, 1em;
+      }
+      
+      /* create a style for cards with boarders */
+      .card {
+        /* the border is blue and round cornered */
+        border: 1px solid blue;
+        border-radius: 1em;
+        padding: 1em;
+        margin: 0.5em;
+        /* use flex display to make sure the image is on the left */
+        display: flex;
+        flex-direction: row;
+        /* the image is aligned to the center */
+        align-items: center;
+        /* fix the width to prevent text overflow */
+        width: 26em;
+      }
+      
+      /* the image is a sqaure */
+      img {
+        aspect-ratio: 1/1;
+        height: 5em;
+        margin-right: 1em;
+        box-shadow: 0.15em 0.15em 0.1em 0.05em rgba(0, 0, 255, 0.8);
+        border-radius: 0.25em;
+      }
+      
+      /* the reload button is a circle and always at the bottom right corner */
+      #reload {
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: lightgray;
+        color: #000;
+        text-align: center;
+        line-height: 2em;
+      }
+      
