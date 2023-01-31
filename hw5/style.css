@@ -51,7 +51,7 @@ html {
       #reload {
         position: fixed;
         bottom: 1em;
-        right: 1em;
+        right: 1em; 
         width: 5em;
         height: 5em;
         border-radius: 50%;
