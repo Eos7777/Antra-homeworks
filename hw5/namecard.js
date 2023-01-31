@@ -1,12 +1,14 @@
-async function fetchUsers() {
-  const response = await fetch('https://randomuser.me/api/?results=20');
-  const data = await response.json();
-  console.log(data)
+function fetchUsers() {
+  const data = fetch('https://randomuser.me/api/?results=20') // async
+    .then((response) => {
+      const res = response.json()
+      return res;
+    });
   return data;
 }
 //async keywork is used to declare an async fn
 //async fn: returns a promise
-// await promise 
+//await promise 
 
 function createCard(user) {
   const card = document.createElement('div');
@@ -66,10 +68,10 @@ function createCard(user) {
 function createGrid(cards) {
   const grid = document.createElement('div');
   grid.classList.add('grid');
-  for (let c of cards){
-    grid.appendChild(c);
-  }
-  // cards.forEach((card) => grid.appendChild(card));
+  // for (let c of cards){
+  //   grid.appendChild(c);
+  // }
+  cards.forEach((card) => grid.appendChild(card));
   return grid;
 }
 
