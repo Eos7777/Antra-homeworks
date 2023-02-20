@@ -1,0 +1,24 @@
+<input
+  type="text"
+  [(ngModel)]="bookname"
+  #inputbook
+  placeholder="search your book..."
+/>
+
+<div class="content">
+  <div class="booklist">
+    <app-booklist
+      *ngFor="let book of bookService.booklist$ | async"
+      [book]="book"
+      (idemiter)="addingWishlist($event)"
+    ></app-booklist>
+  </div>
+  <div class="wishlist">
+    <h1>Wishlist</h1>
+    <app-wishlist
+      *ngFor="let wbook of bookService.wishlist$ | async"
+      [wbook]="wbook"
+      (idemiter)="deleteWishlist($event)"
+    ></app-wishlist>
+  </div>
+</div>
