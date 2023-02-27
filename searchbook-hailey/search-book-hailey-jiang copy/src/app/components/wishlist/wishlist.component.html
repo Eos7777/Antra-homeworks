@@ -1,8 +1,0 @@
-
-<div>
-  <h1> My Wish List</h1>
-    <section *ngFor="let book of wishlist$ | async">
-      <h4>{{ book.bookName }}</h4>
-      <button (click)="deleteBook(book)">Delete</button>
-    </section>
-</div>
