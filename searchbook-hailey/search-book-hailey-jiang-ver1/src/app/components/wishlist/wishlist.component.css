@@ -1,0 +1,12 @@
+div {
+  margin-top: 10vh;
+  width: 30vw;
+  height: 50vh;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
