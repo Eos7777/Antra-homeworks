@@ -13,7 +13,7 @@ import { Subject } from 'rxjs';
 
 
 export class BooklistComponent implements OnInit {
-        // booklist$: Book[] = []
+        // booklist: Book[] = []
         booklist$: Subject<any> = new Subject();
         constructor(private bookService: BookService) { }
 
@@ -24,26 +24,8 @@ export class BooklistComponent implements OnInit {
                 this.booklist$ = this.bookService.booklist$;
         }
 
-        // ngOnInit(): void {
-        //         this.bookService.booklist$.subscribe((data: any) => {
-        //                 this.books = data;
-        //         });
-        // }
-        // ngOnInit(): void {
-        //         this.booklist$ = this.bookService.booklist$;
-        // }
-
-        // ngOnInit(): void {
-        //         this.Bookservice.bookList$.subscribe((data: any) => {
-        //                 this.bookList = data;
-        //                 // console.log(this.bookList)
-        //         })
-        // }
-
         addBook(id: string) {
                 this.bookService.addBook(id);
-                // if (book.addedToWishilist === false) {
-                //         book.addedToWishilist = true;
-                // }
         }
+
 }

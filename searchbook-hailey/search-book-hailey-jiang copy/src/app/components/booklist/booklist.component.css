@@ -1,23 +1,31 @@
 div {
-  width: 60vw;
+  width: 70vw;
   margin-top: 40px;
 }
 
 section {
-  width: 100%;
+  opacity: 0.75;
+  width: 80%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.img-container {
-  width: 15%;
+section:hover {
+  opacity: 1;
 }
+
+
+.img-container {
+  width: 10%;
+}
+
 
 .content-container {
   width: 80%; 
 }
 
-section:hover {
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
+.hr{
+  border: solid rgb(53, 54, 57) 2.5px;
 }
+

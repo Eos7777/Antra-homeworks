@@ -1,11 +1,14 @@
 
 <main>
-  <div class="left">
-      <input type="text" [(ngModel)]="bookName" #inputbook placeholder="search your book...">
+  <div class="search">
+    <input type="text" [(ngModel)]="bookName" #inputbook placeholder="search your book...">
+  </div>
+  <div class="lists">
+    <div class="booklist">
       <app-booklist></app-booklist>
-  </div>
-  <div class="right">
+    </div>
+    <div class="wishlist">
       <app-wishlist></app-wishlist>
+    </div>
   </div>
-</main> 
-<h1>search.component.html</h1> 
+</main>

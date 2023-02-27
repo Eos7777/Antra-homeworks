@@ -1,8 +1,8 @@
+
 <div>
-  <!-- <p>My Reading Wishlist({{(wishlist$ | async)? (wishlist$ | async).length : 0 }})</p> -->
-  <section *ngFor="let book of wishlist$ | async">
-          <h4>{{ book.bookName }}</h4>
-          <button (click)="deleteBook(book)">X</button>
-  </section>
+  <h1> My Wish List</h1>
+    <section *ngFor="let book of wishlist$ | async">
+      <h4>{{ book.bookName }}</h4>
+      <button (click)="deleteBook(book)">Delete</button>
+    </section>
 </div>
-<h1>wishlist.component.html</h1> 
