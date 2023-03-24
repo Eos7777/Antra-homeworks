@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,8 @@ import { SearchEmployeeService } from './service/search-employee.service';
     CommonModule,
     HttpClientModule,
   ],
+  exports: [SearchComponent, ListComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [SearchEmployeeService],
   bootstrap: [AppComponent]
 })

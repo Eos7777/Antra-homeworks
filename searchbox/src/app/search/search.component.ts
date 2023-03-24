@@ -32,12 +32,24 @@ export class SearchComponent implements OnInit {
   // filteredEmployees: Employee[] = [];
 
   ngOnInit() {
+    
     this.form = this.fb.group({
       search: ['']
     })
+    console.log("In Search Component");
 
-    this.search?.valueChanges.pipe(debounceTime(1000)).subscribe((data) => {
-      this.service.getSearchResult(data);
+    this.service.getEmployees().subscribe((data) => {
+      console.log("in service.getemployees")
+      console.log(data)
+    });
+
+    // this.service.getEmployees();
+
+    this.search?.valueChanges.pipe(debounceTime(1000)).subscribe((searchTerm) => {
+      this.service.getEmployees().subscribe((data) => {
+        this.service.getSearchResult(searchTerm)
+      })
+      
     })
       // console.log("SearchComponent printing employees")
       // console.log(this.employees);
