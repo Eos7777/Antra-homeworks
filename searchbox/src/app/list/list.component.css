@@ -1,16 +1,17 @@
 .list-container {
+        margin-top: 4px;
         list-style-type: none;
-        border-style: dashed;
+        /* border-style: dashed; */
         border-color: black;
 }
 
 li {
-        border: 1px black solid;
+        border: 1.5px #CCCCCC solid;
         margin-bottom: 5px;
         font-size: 1.5rem;
 }
 
 li:hover {
-        background-color: rgb(87, 87, 236);
+        background-color: #2B537D;
         color: aliceblue;
 }
