@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("In List Component")
-    this.service.data$.subscribe((data) => {
+    this.service.dataToDisplay$.subscribe((data) => {
       this.employees = data;
     })
     // this.service.getEmployees().subscribe();

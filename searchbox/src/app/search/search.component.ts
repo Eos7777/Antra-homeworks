@@ -46,9 +46,11 @@ export class SearchComponent implements OnInit {
     // this.service.getEmployees();
 
     this.search?.valueChanges.pipe(debounceTime(1000)).subscribe((searchTerm) => {
-      this.service.getEmployees().subscribe((data) => {
-        this.service.getSearchResult(searchTerm)
-      })
+      this.service.getSearchResult(searchTerm);
+      
+      // this.service.getEmployees().subscribe((data) => {
+        
+      // })
       
     })
       // console.log("SearchComponent printing employees")

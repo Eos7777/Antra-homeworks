@@ -45,18 +45,17 @@ export class SearchEmployeeService {
     console.log(this.data)
     // return filteredEmployees;
 
-    this.data = this.data.filter((data) => {
+    this.dataToDisplay = this.data.filter((data) => {
       if (searchTerm === "") {
         return "";
       }else {
         return data.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || data.last_name.toLowerCase().includes(searchTerm.toLowerCase());
-
       }
     })
-    console.log("in getsearchresult printing dataToDisplay")
-    console.log(this.dataToDisplay);
-    this.data$.next(this.data);
-    console.log("in getsearchresult printing data")
-    console.log(this.data);
+    // console.log("in getsearchresult printing dataToDisplay")
+    // console.log(this.dataToDisplay);
+    this.dataToDisplay$.next(this.dataToDisplay);
+    // console.log("in getsearchresult printing data")
+    // console.log(this.data);
   }
 }
