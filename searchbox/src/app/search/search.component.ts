@@ -38,10 +38,13 @@ export class SearchComponent implements OnInit {
     })
     console.log("In Search Component");
 
+    // this.service.getEmployees();
     this.service.getEmployees().subscribe((data) => {
-      console.log("in service.getemployees")
-      console.log(data)
-    });
+      // this.service.dataToDisplay = data;
+      // console.log("getEmployees printing data")
+      // console.log(data)
+    })
+  
 
     // this.service.getEmployees();
 

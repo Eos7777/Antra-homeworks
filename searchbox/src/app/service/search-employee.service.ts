@@ -16,25 +16,25 @@ export class SearchEmployeeService {
   public dataToDisplay!: Employee[];
   public sortedData!: Employee[];
 
+  
   constructor(private http: HttpClient) { }
 
   getEmployees() {
-    console.log("In getEmployees")
-    return this.http.get<Fetched>(this.url).pipe(
+     return this.http.get<Fetched>(this.url).pipe(
       map((data: Fetched) => {
         return data.data;
       }),
-      
       tap((data: Employee[]) => {
         data.sort((p1: Employee, p2: Employee) =>
           p1.last_name < p2.last_name ? -1 : p1.last_name > p2.last_name ? 1 : 0
         );
         this.data = data;
         this.data$.next(data);
-        this.sortedData = data;
-        console.log("In getEmployees printing sortedData")
-        console.log(this.sortedData)
-        return this.sortedData;
+        this.dataToDisplay = data;
+        this.dataToDisplay$.next(data);
+        console.log("IN getEmployees printing data")
+        console.log(this.data)
+        return this.data;
       })
     )
   }
@@ -46,16 +46,18 @@ export class SearchEmployeeService {
     // return filteredEmployees;
 
     this.dataToDisplay = this.data.filter((data) => {
+
       if (searchTerm === "") {
-        return "";
-      }else {
+        return data;
+      } else {
         return data.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || data.last_name.toLowerCase().includes(searchTerm.toLowerCase());
+
       }
     })
-    // console.log("in getsearchresult printing dataToDisplay")
-    // console.log(this.dataToDisplay);
+    console.log("in getsearchresult printing dataToDisplay")
+    console.log(this.dataToDisplay);
     this.dataToDisplay$.next(this.dataToDisplay);
-    // console.log("in getsearchresult printing data")
-    // console.log(this.data);
+    console.log("in getsearchresult printing data")
+    console.log(this.data);
   }
 }
