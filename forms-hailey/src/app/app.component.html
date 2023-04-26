@@ -1,0 +1,15 @@
+<app-address-form
+  [formData]="defaultAddress"
+  (Submit)="onFormSubmit($event)"
+></app-address-form>
+
+<div *ngFor="let form of submittedForms; let i = index">
+  <h1>Form {{ i + 1 }}</h1>
+  <p>name: {{ form.name }}</p>
+  <p>address: {{ form.address }}</p>
+  <p>zipcode: {{ form.zipcode }}</p>
+  <p>state: {{ form.state }}</p>
+  <p>country: {{ form.country }}</p>
+  <p>phone: {{ form.phone }}</p>
+  <p>email: {{ form.email }}</p>
+</div>

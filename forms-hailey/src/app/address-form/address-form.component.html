@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1>Enter Info Here</h1>
+  <label for="name">name: </label>
+  <input type="text" id="name" formControlName="name" />
+  <label for="address">address: </label>
+  <input type="text" id="address" formControlName="address" />
+  <label for="zipcode">zipcode: </label>
+  <input type="text" id="zipcode" formControlName="zipcode" />
+  <label for="state">state: </label>
+  <input type="text" id="state" formControlName="state" />
+  <label for="country">country: </label>
+  <select id="country" formControlName="country">
+    <option value="India">India</option>
+    <option value="England">England</option>
+    <option value="Singapore">Singapore</option>
+    <option value="USA">USA</option>
+  </select>
+  <label for="phone">phone: </label>
+  <input type="text" id="phone" formControlName="phone" />
+  <label for="email">email: </label>
+  <input type="text" id="email" formControlName="email" />
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>

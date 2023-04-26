@@ -1,0 +1,43 @@
+.connect {
+  display: flex;
+  flex-direction: row;
+  /* padding: 50px; */
+  /* gap: 90px; */
+  /* justify-content: space-between; */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 30%;
+  padding: 0 40px;
+  justify-content: center;
+}
+
+.words {
+  width: 70%;
+  padding: 20px 40px;
+}
+
+button {
+  height: 20%;
+  width: 60%;
+  
+  color: aliceblue;
+  background-color: rgb(72, 157, 246);
+  border-radius: 3px;
+  align-self: center;
+  
+}
+
+.jointoday{
+  border: none;
+}
+
+.connectus{
+  color: rgb(72, 157, 246);
+  background-color: white;
+  border-color: rgb(72, 157, 246);
+  border: 1px solid
+}

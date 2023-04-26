@@ -1,0 +1,21 @@
+p {
+  font-family: Lato;
+}
+
+.page {
+  background-color: #f0f0f0;
+}
+
+.signup {
+  margin: 20px;
+  background-color: white;
+}
+
+.join {
+  background-color: white;
+  margin: 20px;
+}
+.connect {
+  margin: 20px;
+  background-color: white;
+}

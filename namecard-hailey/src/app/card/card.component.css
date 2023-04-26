@@ -1,0 +1,41 @@
+.card {
+  border: 2px solid blue;
+  border-radius: 20px;
+  height: 75px;
+  margin: 15px 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px 10px 10px;
+}
+
+.avatar-and-name {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.name {
+  display: flex;
+  /* align-items: flex-end; */
+  /* justify-content: bottom; */
+  align-items: baseline;
+
+  /* text-align: end; */
+}
+
+.name p {
+  align-self: flex-end;
+}
+
+.email {
+  /* border: 2px solid blue; */
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  /* border: 2px solid blue; */
+  width: 50px;
+}

@@ -1,0 +1,9 @@
+<!-- <h1>ratings-list worked</h1> -->
+
+<app-ratings-item
+  class="ratings_item"
+  *ngFor="let rating of ratingList"
+  [name]="rating.name"
+  [content]="rating.content"
+  [rate]="rating.rate"
+></app-ratings-item>
